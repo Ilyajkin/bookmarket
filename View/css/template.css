@@ -1,10 +1,14 @@
 .container {
-    max-width: 1000px;
+    max-width: 900px;
+    border: 1px solid #5bc0de;
+    border-radius: 50px;
 }
 
 header {
-    margin-top: 10px;
-    height: 50px;
+    height: 80px;
+    background-color: #5bc0de;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .logo {
@@ -16,16 +20,15 @@ header {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    color: red;
 }
 
 .contacts {
-    margin: auto;
     font-weight: 700;
     text-align: center;
 }
 
 .email {
-    margin-top: 36px;
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -42,16 +45,17 @@ header {
 }
 
 .banner {
+    width: 900px;
     margin-top: 20px;
     background-image: url("../img/banner.jpg");
-    height: 391px;
+    height: 286px;
     border-radius: 50px;
 }
 
 .top-menu {
-    margin-top: 20px;
+    margin: auto;
     height: 40px;
-    /*background-color: lightblue;*/
+    width: 900px;
     border-radius: 5px;
     text-align: center;
     font-size: 20px;
@@ -76,4 +80,73 @@ header {
     color: darkred;
 }
 
+/*main*/
 
+.news {
+    margin: 20px 0;
+    border-bottom: 3px solid #5bc0de;
+}
+
+.news-title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.new-top {
+    height: 160px;
+    width: 400px;
+    margin: 10px auto;
+    border: 1px solid #5bc0de;
+    box-shadow:
+            0 1px 4px rgba(0, 0, 0, .3),
+            0 0 40px rgba(0, 0, 0, .1) inset;
+    transition: 1s;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.new-bottom {
+    height: 160px;
+    width: 400px;
+    margin: 10px auto;
+    border: 1px solid #5bc0de;
+    box-shadow:
+            0 1px 4px rgba(0, 0, 0, .3),
+            0 0 40px rgba(0, 0, 0, .1) inset;
+    transition: 1s;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/*footer*/
+footer {
+    margin-top: 200px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #5bc0de;
+}
+
+.footer {
+    margin-top: 200px;
+}
+
+.lower-menu {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-item {
+    color: darkred;
+}
+
+.address {
+    margin-top: 20px;
+    width: 400px;
+    text-align: center;
+    color: darkred;
+    font-weight: bold;
+}

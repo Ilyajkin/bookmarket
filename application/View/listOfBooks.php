@@ -1,4 +1,9 @@
-<?php ?>
+<?php
+require_once '../Database/functions.php';
+$connection = connect();
+$result = get($connection);
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -55,23 +60,40 @@
                 <div class="col-md-4"><a href="listOfBooksUser.php" class="listOfBooksUser">Моя библиотека</a></div>
             </div>
         </div>
-
+        <div>
+            <table><tr><th>Название</th><th>Автор</th><th>Краткое описание</th></tr>
+                <?php
+                foreach ($result as $value) :?>
+                    <tr>
+                        <td>
+                            <?php  echo $value["name"]; ?>
+                        </td>
+                        <td>
+                            <?php  echo $value["author"]; ?>
+                        </td>
+                        <td>
+                            <?php  echo $value["shortDescription"]; ?>
+                        </td>
+                    </tr>
+                <?php  endforeach;?>
+            </table>
+        </div>
     </main>
-    <footer class="row">
-        <div class="col-md-6 lower-menu">
-            <ul>
-                <li><a href="main.php" class="menu-item">Главная страница</a></li>
-                <li><a href="authorization.php" class="menu-item">Авторизация</a></li>
-                <li><a href="listOfBooks.php" class="menu-item">Библиотека</a></li>
-                <li><a href="listOfBooksUser.php" class="menu-item">Личная библиотека</a></li>
-            </ul>
+<footer class="row">
+    <div class="col-md-6 lower-menu">
+        <ul>
+            <li><a href="main.php" class="menu-item">Главная страница</a></li>
+            <li><a href="authorization.php" class="menu-item">Авторизация</a></li>
+            <li><a href="listOfBooks.php" class="menu-item">Библиотека</a></li>
+            <li><a href="listOfBooksUser.php" class="menu-item">Личная библиотека</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="address">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, nesciunt!</p>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <p class="address">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, nesciunt!</p>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 </div>
 
 </body>

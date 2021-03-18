@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+require_once '../Database/functions.php';
+$connection = connect();
+$result = get($connection);?>
+
 <!doctype html>
 <html lang="en">
 <head>

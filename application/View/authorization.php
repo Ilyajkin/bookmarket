@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+require_once '../Database/functions.php';
+$connection = connect();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -56,15 +60,13 @@
             </div>
         </div>
         <div class="col-md-12 form-auth">
-            <form action="" method="post">
+            <form action="../Database/connection.php" method="post">
                 <div class="field">
-                    <label for="login">Логин:</label>
-                    <input type="text" name="login" id="login" />
-                    <label for="password">Пароль:</label>
-                    <input type="password" name="password" id="password"/>
-                    <label></label>
+                    <label for="login">Логин:</label><input type="text" name="login" id="login"/>
+                    <label for="password">Пароль:</label><input type="password" name="password" id="password"/>
                     <input type="submit" value="Войти">
                 </div>
+            </form>
         </div>
     </main>
     <footer class="row">

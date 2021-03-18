@@ -210,3 +210,10 @@ div.field label {
     width: 70px;
     height: 15px;
 }
+
+/* listOfBooks*/
+
+.cover-img-list {
+    width: 120px;
+    height: 180px;
+}

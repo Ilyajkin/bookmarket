@@ -44,7 +44,7 @@ $result = get($connection);
                 <div class="button-authorization">
                     <form action="/" method="post">
                         <button>
-                            Войти
+                            <a href="authorization.php">Войти</a>
                         </button>
                     </form>
                 </div>

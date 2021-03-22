@@ -39,7 +39,7 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `last_name`, `pos`) VALUES
+INSERT INTO `users` (`id`, login, `last_name`, `pos`) VALUES
 (1, 'Иван', 'Иванов', 'Менеджер'),
 (2, 'Петр', 'Петров', 'Сисадмин'),
 (3, 'Сара', 'Конор', 'Бухгалтер'),

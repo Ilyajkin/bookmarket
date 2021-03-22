@@ -5,11 +5,18 @@ function connect() {
     $config = require_once 'dbconfig.php';
     return mysqli_connect($config['host'], $config['login'], $config['password'], $config['dbname']);
 }
-// Добовляем данные
-function add($connection, $login, $password) {
-    return mysqli_query($connection, "INSERT INTO users (login, password) VALUES('$login', '$password')");
+// Проверка авторизации
+function check($connection, $login, $password) {
+    $checkUser = mysqli_query($connection, "SELECT * FROM 'users' WHERE 'login' = '$login' AND 'password' = '$password'");
+    if (mysqli_num_rows($checkUser) > 0) {
+        echo "Авторизирация прошла успешно";
+        header('Location: ../View/listOfBooksUser.php');
+    } else {
+        echo "Авторизироваться не удалось";
+        header('Location: ../View/authorization.php');
+    }
 }
-
+// Вывод списка книг
 function get($connection) {
     $outputQuery = mysqli_query($connection, "SELECT * FROM listbook");
     $result = array();

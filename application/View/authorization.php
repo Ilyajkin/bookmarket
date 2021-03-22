@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../Database/functions.php';
 $connection = connect();
 ?>
@@ -17,7 +18,7 @@ $connection = connect();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/page-auth.css">
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.css">
@@ -43,7 +44,7 @@ $connection = connect();
                 <div class="button-authorization">
                     <form action="/" method="post">
                         <button>
-                            Войти
+                            <a href="authorization.php">Войти</a>
                         </button>
                     </form>
                 </div>
@@ -59,15 +60,18 @@ $connection = connect();
                 <div class="col-md-4"><a href="listOfBooksUser.php" class="listOfBooksUser">Моя библиотека</a></div>
             </div>
         </div>
-        <div class="col-md-12 form-auth">
-            <form action="../Database/connection.php" method="post">
-                <div class="field">
-                    <label for="login">Логин:</label><input type="text" name="login" id="login"/>
-                    <label for="password">Пароль:</label><input type="password" name="password" id="password"/>
-                    <input type="submit" value="Войти">
-                </div>
-            </form>
+
+        <!--Форма авторизации -->
+        <div class="body-form">
+        <form class="form" action="../Database/signin.php" method="post">
+            <label for="login">Логин</label>
+            <input type="text" placeholder="Введите логин" id="login" name="login">
+            <label for="password">Пароль</label>
+            <input type="password" placeholder="Введите пароль" id="password" name="password">
+            <button class="button" type="submit">Войти</button>
+        </form>
         </div>
+
     </main>
     <footer class="row">
         <div class="col-md-6 lower-menu">

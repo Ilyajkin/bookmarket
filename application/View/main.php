@@ -39,7 +39,7 @@
                 <div class="button-authorization">
                     <form action="authorization.php" method="post">
                         <button>
-                            Войти
+                            <a href="authorization.php">Войти</a>
                         </button>
                     </form>
                 </div>

@@ -8,7 +8,7 @@ $pos = $_POST['pos'];
 // Create
 
 if (isset($_POST['submit'])) {
-	$sql = ("INSERT INTO `users`(`name`, `last_name`, `pos`) VALUES(?,?,?)");
+	$sql = ("INSERT INTO `users`(login, `last_name`, `pos`) VALUES(?,?,?)");
 	$query = $pdo->prepare($sql);
 	$query->execute([$name, $last_name, $pos]);
 	$success = '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -32,7 +32,7 @@ $edit_last_name = $_POST['edit_last_name'];
 $edit_pos = $_POST['edit_pos'];
 $get_id = $_GET['id'];
 if (isset($_POST['edit-submit'])) {
-	$sqll = "UPDATE users SET name=?, last_name=?, pos=? WHERE id=?";
+	$sqll = "UPDATE users SET login=?, last_name=?, pos=? WHERE id=?";
 	$querys = $pdo->prepare($sqll);
 	$querys->execute([$edit_name, $edit_last_name, $edit_pos, $get_id]);
 	header('Location: '. $_SERVER['HTTP_REFERER']);

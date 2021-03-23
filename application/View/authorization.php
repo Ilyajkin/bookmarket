@@ -1,7 +1,8 @@
 <?php
-session_start();
+
 require_once '../Database/functions.php';
 $connection = connect();
+session_start();
 ?>
 
 <!doctype html>
@@ -22,7 +23,7 @@ $connection = connect();
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <title>Главная страница</title>
+    <title>Страница авторизации</title>
 </head>
 <body>
 <div class="container">

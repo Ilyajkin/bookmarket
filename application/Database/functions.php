@@ -6,8 +6,8 @@ function connect() {
     return mysqli_connect($config['host'], $config['login'], $config['password'], $config['dbname']);
 }
 // Проверка авторизации
-function check($connection, $login, $password) {
-    $checkUser = mysqli_query($connection, "SELECT * FROM 'users' WHERE 'login' = '$login' AND 'password' = '$password'");
+function checkUserAuth($connection, $login, $password) {
+    $checkUser = mysqli_query($connection, "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
     if (mysqli_num_rows($checkUser) > 0) {
         echo "Авторизирация прошла успешно";
         header('Location: ../View/listOfBooksUser.php');

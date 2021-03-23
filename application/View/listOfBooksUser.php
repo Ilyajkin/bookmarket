@@ -21,7 +21,7 @@ $result = get($connection);?>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="css/jquery-ui.css">
-    <title>Главная страница</title>
+    <title>Моя библиотека</title>
 </head>
 <body>
 <div class="container">
